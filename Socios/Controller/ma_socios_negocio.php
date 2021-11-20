@@ -13,7 +13,7 @@
 
 
         // Case según método elegido
-        require_once("../Config/Conexion.php");
+        require_once("/xampp/htdocs/G6_19/Config/Conexion.php");
         require_once("../Models/Ma_socios_negocio.php");
         $ma_socios=new  Ma_socios_negocio();
         $body=json_decode(file_get_contents("php://input"),true);
