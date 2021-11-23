@@ -13,8 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     header('Content-Type: application/json');
 
 // Case según método elegido
-require_once("../Config/Conexion.php");
-require_once("../Models/Ma_facturas.php");
+require_once("../../Config/Conexion.php");
+require_once("../../Facturas/Models/Ma_facturas.php");
+
 $ma_facturas=new  Ma_facturas();
 $body=json_decode(file_get_contents("php://input"),true);
 switch ($_GET["op"]){

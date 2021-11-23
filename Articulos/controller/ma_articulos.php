@@ -13,8 +13,8 @@
 
 
 // Case según método elegido
-require_once("../config/conexion.php");
-require_once("../Models/Ma_articulos.php");
+require_once("../../config/conexion.php");
+require_once("../../Articulos/Models/Ma_articulos.php");
 $ma_articulos=new  Ma_articulos();
 $body=json_decode(file_get_contents("php://input"),true);
 switch ($_GET["op"]){

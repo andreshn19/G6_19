@@ -5,7 +5,7 @@ class Ma_socios_negocio extends Conectar{
     public function get_socios(){
         $conectar=parent :: conexion();
         parent::set_names();
-        $sql="SELECT * FROM ma_socios_negocios";
+        $sql="SELECT * FROM ma_socios_negocios WHERE ESTADO=1";
         $sql=$conectar->prepare($sql);
         $sql->execute();
         return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);

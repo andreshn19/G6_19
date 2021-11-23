@@ -8,11 +8,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
   header('Content-Type: text/plain');
   die();
 }
+
   header('Access-Control-Allow-Origin: *');  
   header('Content-Type: application/json');
+  
 // Case según método elegido
-require_once("../Config/Conexion.php");
-require_once("../Models/Ma_pedidos.php");
+require_once("../../Config/Conexion.php");
+require_once("../../Pedidos/Models/Ma_pedidos.php");
+
 $ma_pedidos=new  Ma_pedidos();
 $body=json_decode(file_get_contents("php://input"),true);
 switch ($_GET["op"]){
